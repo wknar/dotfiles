@@ -10,11 +10,7 @@ export PATH
 alias sc='screen'
 alias vim='/usr/local/vim-7.3/bin/vim'
 alias vi='vim'
-<<<<<<< HEAD
-alias grep='grep --color'
-=======
 alias ls='ls --color'
 export LS_COLORS='di=1;36:fi=0:ln=1;95:so=1;91:pi=1;91:ex=93:bd=1;91;46:cd=1;91:or=1;37:mi=1;37:*.rpm=1;92'
 alias grep='grep -ir --color'
->>>>>>> 19aad7824d4aeff12574e80deab3aca9f9af34e4
 export GREP_COLOR='00;35'
