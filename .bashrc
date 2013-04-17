@@ -7,7 +7,7 @@ fi
 
 # PATH=$PATH:/usr/local/vim-7.3/bin
 # export PATH
-alias sc='screen'
+# alias sc='screen'
 # alias vim='/usr/local/vim-7.3/bin/vim'
 alias vi='vim'
 # alias ls='ls --color'
