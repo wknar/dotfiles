@@ -49,7 +49,7 @@ set wildmode=full "補完動作の設定 full: 次のマッチを完全に補完
 
 au  BufEnter *   execute ":lcd " . escape(expand("%:p:h"), " #\\")
 syntax on
-colorscheme desert
+"colorscheme desert
 "colorscheme pychimp
 
 "
