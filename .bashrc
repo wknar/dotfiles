@@ -5,6 +5,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+export PS1="[\u: \W]$ "
 # PATH=$PATH:/usr/local/vim-7.3/bin
 PATH=$PATH:$HOME/local/bin
 export PATH
