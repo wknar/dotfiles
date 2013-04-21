@@ -9,6 +9,7 @@ export PS1="[\u: \W]$ "
 # PATH=$PATH:/usr/local/vim-7.3/bin
 PATH=$PATH:$HOME/local/bin
 export PATH
+alias screen='$HOME/local/bin/screen'
 alias sc='screen'
 # alias vim='/usr/local/vim-7.3/bin/vim'
 alias vim='$HOME/local/bin/vim'
