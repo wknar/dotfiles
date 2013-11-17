@@ -21,5 +21,4 @@ alias ls='ls -G'
 alias grep='grep -ir --color'
 export GREP_COLOR='00;35'
 
-alias mkdir='mkdir -m 2775'
 alias rm='rm -i'
