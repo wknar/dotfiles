@@ -51,19 +51,6 @@ au  BufEnter *   execute ":lcd " . escape(expand("%:p:h"), " #\\")
 syntax on
 colorscheme darkblue
 
-"
-" -------------------
-" winmanager.vim 用
-" -------------------
-" let g:bufExplorerOpenMode = 1
-" let g:bufExplorerSplitBelow = 1
-" let g:bufExplorerSplitType = 15
-
-" map <c-w><c-f> :FirstExplorerWindow<cr>
-" map <c-w><c-b> :BottomExplorerWindow<cr>
-" map <c-w><c-t> :WMToggle<cr>
-
-" let g:winManagerWindowLayout = 'FileExplorer|TagList'
 
 " -------------------
 " 関数の定義
