@@ -15,7 +15,7 @@ alias sc='screen'
 alias vim='$HOME/local/bin/vim'
 alias vi='vim'
 # alias ls='ls -color'
-# export LS_COLORS='di=1;36:fi=0:ln=1;95:so=1;91:pi=1;91:ex=93:bd=1;91;46:cd=1;91:or=1;37:mi=1;37:*.rpm=1;92'
+# export LS_COLORS='di=0;96:fi=0;92:ln=1;95:so=1;91:pi=1;91:ex=1;93:bd=1;91:cd=1;91:or=1;37:mi=1;97'
 export LSCOLORS=fxcxgxdxbxegedabagacad
 alias ls='ls -G'
 alias grep='grep -ir --color'
