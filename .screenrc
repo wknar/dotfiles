@@ -1,3 +1,7 @@
+logfile "log/screen-%Y%m%d-%n.log"
+log on
+deflog on
+
 autodetach on
 startup_message off
 crlf off
