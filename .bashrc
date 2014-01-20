@@ -115,6 +115,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# prompt settings
+PS1_BAK=$PS1
+PS1="\[\e[0;33m\][\u@\h:\W]\$\[\e[00m\] "
+
 # proxy settings
 export http_proxy="http://dev-proxy.db.rakuten.co.jp:9501/"
 export https_proxy="https://dev-proxy.db.rakuten.co.jp:9501/"
