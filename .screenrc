@@ -1,4 +1,4 @@
-logfile "log/screen-%Y%m%d-%n.log"
+logfile "log/local/%Y%m%d-%c.log"
 log on
 deflog on
 

@@ -133,12 +133,12 @@ export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 alias rm='rm -i'
 
 # telnet settings
-alias dev-login='telnet -l arawakana01 dev-loginjp101c.db.rakuten.co.jp'
-alias stg-login='telnet -l arawakana01 stg-loginjp101c.db.rakuten.co.jp'
-alias pro-login='telnet -l arawakana01 loginjp101c.db.rakuten.co.jp'
-alias dev-login-2='telnet -l arawakana dev-loginjp201zd.zd.rakuten.co.jp'
-alias stg-login-2='telnet -l arawakana stg-loginjp201zd.zd.rakuten.co.jp'
-alias pro-login-2='telnet -l arawakana loginjp201zd.zd.rakuten.co.jp'
+alias dev-login='telnet -l arawakana01 dev-loginjp101c.db.rakuten.co.jp | tee /home/arawakana01/log/dev/`date '+%Y%m%d-%H:%M'`.log'
+alias stg-login='telnet -l arawakana01 stg-loginjp101c.db.rakuten.co.jp | tee /home/arawakana01/log/stg/`date '+%Y%m%d-%H:%M'`.log'
+alias pro-login='telnet -l arawakana01 loginjp101c.db.rakuten.co.jp | tee /home/arawakana01/log/pro/`date '+%Y%m%d-%H:%M'`.log'
+alias dev-login-2='telnet -l arawakana dev-loginjp201zd.zd.rakuten.co.jp | tee /home/arawakana01/log/dev/`date '+%Y%m%d-%H:%M'`.log'
+alias stg-login-2='telnet -l arawakana stg-loginjp201zd.zd.rakuten.co.jp | tee /home/arawakana01/log/stg/`date '+%Y%m%d-%H:%M'`.log'
+alias pro-login-2='telnet -l arawakana loginjp201zd.zd.rakuten.co.jp | tee /home/arawakana01/log/pro/`date '+%Y%m%d-%H:%M'`.log'
 
 # git settings
 alias g="git"
