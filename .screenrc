@@ -1,4 +1,4 @@
-logfile "log/local/%Y%m%d-%c.log"
+logfile "log/local/%Y%m%d-%02c.log"
 log on
 deflog on
 
@@ -7,9 +7,9 @@ startup_message off
 crlf off
 defscrollback 10000
 bell_msg "^G"
+encoding utf-8 utf-8
 defkanji utf-8
 defencoding utf-8
-encoding utf-8 utf-8
 escape ^Jj
 pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 vbell off
