@@ -21,4 +21,4 @@ set wildmode=full
 set syntax=on
 set background=dark
 
-vnoremap * "zy:let @/ = @z<CR>n
+vnoremap * "zy:let @/ = @z<CR>n"
