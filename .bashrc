@@ -126,6 +126,7 @@ export ftp_proxy="http://dev-proxy.db.rakuten.co.jp:9501/"
 export RAKUTEN_SERVER_INFO="LOCAL"
 
 alias vi='vim'
+export EDITOR=vim
 
 export LESS='-R'
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
