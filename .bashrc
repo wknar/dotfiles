@@ -127,8 +127,6 @@ export RAKUTEN_SERVER_INFO="LOCAL"
 
 alias vi='vim'
 export EDITOR=vim
-export $VIM_HOME=/usr/bin/vim
-export $PATH=$VIM_HOME/bin:$PATH
 
 export LESS='-R'
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
