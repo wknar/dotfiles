@@ -54,3 +54,20 @@ function! s:InitNeoBundle()
 endfunction
 
 call s:InitNeoBundle()
+
+
+" cakephp function auto update
+function! NewUpdate()
+  let time = strftime("%H", localtime())
+  exe "set backupext=.".time
+  if expand('%') =~ g:svbfre && !&readonly && &buftype == ''
+    silent! update
+  endif
+endfunction
+
+let g:cakephp_enable_auto_mode = 1
+autocmd BufNewFile,BufRead *.ctp set filetype=php
+
+let g:cakephp_log = {
+\ 'query' : '/var/log/mysqld/sql.log'
+\}
