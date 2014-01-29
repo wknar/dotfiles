@@ -185,3 +185,10 @@ alias gr.p="git remote prune"
 alias gsm="git submodule"
 alias gdt="git difftool"
 alias gmt="git mergetool"
+
+# open screen
+if [ $TERM != "screen" ]; then
+  if [ $TERM != "dumb" ]; then
+    screen -e ^z^z
+  fi
+fi
