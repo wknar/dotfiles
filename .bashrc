@@ -76,7 +76,7 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color'
-    export LS_COLORS='di=0;96:fi=0;92:ln=1;95:so=1;91:pi=1;91:ex=1;93:bd=1;91:cd=1;91:or=1;37:mi=1;97'
+    export LS_COLORS='di=0;96:fi=0;92:ln=0;95:so=1;91:pi=1;91:ex=1;93:bd=1;91:cd=1;91:or=1;37:mi=1;97'
     #alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'

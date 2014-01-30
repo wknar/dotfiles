@@ -19,9 +19,9 @@ set wildmenu
 set wildmode=full
 
 set syntax=on
-set background=dark
 
 vnoremap * "zy:let @/ = @z<CR>n"
+let g:netrw_liststyle=3
 
 " NeoBundle settings
 function! s:WithoutBundles()
@@ -49,11 +49,24 @@ function! s:InitNeoBundle()
     call s:WithoutBundles()
   endif
 
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neocomplcache'
+  NeoBundle 'thinca/vim-ref'
+  NeoBundle 'vimtaku/hl_matchit.vim.git'
+  NeoBundle 'vim-ruby/vim-ruby'
+
   filetype indent plugin on
   syntax on
 endfunction
 
 call s:InitNeoBundle()
+
+runtime macros/matchit.vim
+
+" hl_matchit settings
+let g:hl_matchit_enable_on_vim_startup = 1
+let g:hl_matchit_hl_groupname = 'Title'
+let g:hl_matchit_allow_ft = 'html\|vim\|ruby\|sh'
 
 
 " cakephp function auto update
