@@ -57,6 +57,7 @@ function! s:InitNeoBundle()
 
   filetype indent plugin on
   syntax on
+  colorscheme slate
 endfunction
 
 call s:InitNeoBundle()

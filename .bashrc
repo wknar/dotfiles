@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,12 +119,6 @@ fi
 PS1_BAK=$PS1
 PS1="\[\e[0;33m\][\u@\h:\W]\$\[\e[00m\] "
 
-# proxy settings
-export http_proxy="http://dev-proxy.db.rakuten.co.jp:9501/"
-export https_proxy="https://dev-proxy.db.rakuten.co.jp:9501/"
-export ftp_proxy="http://dev-proxy.db.rakuten.co.jp:9501/"
-export RAKUTEN_SERVER_INFO="LOCAL"
-
 alias vi='vim'
 export EDITOR=vim
 
@@ -132,14 +126,12 @@ export LESS='-R'
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 
 alias rm='rm -i'
+alias nginx='sudo /opt/nginx/sbin/nginx'
+alias apache='sudo /etc/init.d/apache2'
 
-# telnet settings
-alias dev='telnet -l arawakana01 dev-loginjp101c.db.rakuten.co.jp | tee /home/arawakana01/log/dev/`date '+%Y%m%d-%H:%M'`.log'
-alias stg='telnet -l arawakana01 stg-loginjp101c.db.rakuten.co.jp | tee /home/arawakana01/log/stg/`date '+%Y%m%d-%H:%M'`.log'
-alias pro='telnet -l arawakana01 loginjp101c.db.rakuten.co.jp | tee /home/arawakana01/log/pro/`date '+%Y%m%d-%H:%M'`.log'
-alias dev2='telnet -l arawakana dev-loginjp201zd.zd.rakuten.co.jp | tee /home/arawakana01/log/dev/`date '+%Y%m%d-%H:%M'`.log'
-alias stg2='telnet -l arawakana stg-loginjp201zd.zd.rakuten.co.jp | tee /home/arawakana01/log/stg/`date '+%Y%m%d-%H:%M'`.log'
-alias pro2='telnet -l arawakana loginjp201zd.zd.rakuten.co.jp | tee /home/arawakana01/log/pro/`date '+%Y%m%d-%H:%M'`.log'
+while read line; do
+  echo $line
+done < ~/network.settings
 
 # git settings
 alias g="git"
