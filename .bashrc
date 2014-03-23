@@ -129,9 +129,8 @@ alias rm='rm -i'
 alias nginx='sudo /opt/nginx/sbin/nginx'
 alias apache='sudo /etc/init.d/apache2'
 
-while read line; do
-  echo $line
-done < ~/network.settings
+export PATH="$HOME/.rbenv/bin:$PATH" 
+eval "$(rbenv init -)" 
 
 # git settings
 alias g="git"

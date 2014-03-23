@@ -49,12 +49,6 @@ function! s:InitNeoBundle()
     call s:WithoutBundles()
   endif
 
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'Shougo/neocomplcache'
-  NeoBundle 'thinca/vim-ref'
-  NeoBundle 'vimtaku/hl_matchit.vim.git'
-  NeoBundle 'vim-ruby/vim-ruby'
-
   filetype indent plugin on
   syntax on
   colorscheme slate
