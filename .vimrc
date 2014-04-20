@@ -49,7 +49,7 @@ function! s:InitNeoBundle()
     call s:WithoutBundles()
   endif
 
-  filetype indent plugin on
+  filetype indent plugin off
   syntax on
   colorscheme slate
 endfunction
