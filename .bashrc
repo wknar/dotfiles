@@ -94,7 +94,7 @@ alias l='ls -CF'
 # tree view
 alias tre='tree'
 
-# change to zsh
+# change shell to zsh
 alias z='zsh'
 
 # Add an "alert" alias for long running commands.  Use like so:
