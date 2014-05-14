@@ -11,7 +11,7 @@ set showmatch
 set nobackup
 set number
 set noautoindent
-set history=50
+set history=1000
 set laststatus=2
 set directory=/tmp
 set backspace=indent,eol,start
