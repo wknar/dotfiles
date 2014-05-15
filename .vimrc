@@ -55,7 +55,7 @@ function! s:InitNeoBundle()
   NeoBundle 'vimtaku/hl_matchit.vim.git'
   NeoBundle 'vim-ruby/vim-ruby'
 
-  filetype indent plugin on
+  filetype indent plugin off
   syntax on
   colorscheme slate
 endfunction

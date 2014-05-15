@@ -115,6 +115,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# use node
+source ~/.nvm/nvm.sh
+nvm use v0.11.11
+
 # prompt settings
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
@@ -134,10 +138,6 @@ export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 alias rm='rm -i'
 alias nginx='sudo /opt/nginx/sbin/nginx'
 alias apache='sudo /etc/init.d/apache2'
-
-while read line; do
-  echo $line
-done < ~/network.settings
 
 # open screen
 if [ $TERM != "screen" ]; then
