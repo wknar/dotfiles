@@ -132,7 +132,7 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-  export PS1='\[\033[01;32m\]\u\[\033[2;32m\]@\[\033[0m\]\[\033[01;32m\]\h \[\033[01;36m\]\w\[\033[31m\] $(parse_git_branch)\[\033[00m\] \[\033[0m\]\[\033[01;37m\]`date +"%H:%M:%S"` \[\033[0m\]\n\[\033[01;34m\]\$\[\033[00m\] '
+  export PS1='\[\033[01;32m\]\u\[\033[1;32m\]@\[\033[0m\]\[\033[01;32m\]\h \[\033[01;36m\]\w\[\033[33m\] $(parse_git_branch)\[\033[00m\] \[\033[0m\]\[\033[01;37m\]`date +"%H:%M:%S"` \[\033[0m\]\n\[\033[01;34m\]\$\[\033[00m\] '
 
 # other alias
 alias vi='vim'
@@ -149,5 +149,3 @@ if [ $TERM != "screen" ]; then
     screen -e ^z^z
   fi
 fi
-
-cd
