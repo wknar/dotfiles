@@ -52,7 +52,7 @@ if [ -n "$force_color_prompt" ]; then
 	# a case would tend to support setf rather than setaf.)
 	color_prompt=yes
     else
-	color_prompt=
+	color_prompt=no
     fi
 fi
 
@@ -91,6 +91,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# change shell to zsh
+alias z='zsh'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -119,6 +122,9 @@ fi
 source ~/.nvm/nvm.sh
 nvm use v0.11.11
 
+# path to coffee
+export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin
+
 # prompt settings
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
@@ -136,8 +142,6 @@ export LESS='-R'
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 
 alias rm='rm -i'
-alias nginx='sudo /opt/nginx/sbin/nginx'
-alias apache='sudo /etc/init.d/apache2'
 
 # open screen
 if [ $TERM != "screen" ]; then

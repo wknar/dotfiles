@@ -11,7 +11,7 @@ set showmatch
 set nobackup
 set number
 set noautoindent
-set history=50
+set history=1000
 set laststatus=2
 set directory=/tmp
 set backspace=indent,eol,start
@@ -48,12 +48,6 @@ function! s:InitNeoBundle()
   else
     call s:WithoutBundles()
   endif
-
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'Shougo/neocomplcache'
-  NeoBundle 'thinca/vim-ref'
-  NeoBundle 'vimtaku/hl_matchit.vim.git'
-  NeoBundle 'vim-ruby/vim-ruby'
 
   filetype indent plugin off
   syntax on
