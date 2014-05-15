@@ -116,9 +116,15 @@ if ! shopt -oq posix; then
 fi
 
 # prompt settings
-PS1_BAK=$PS1
-PS1="\[\e[0;33m\][\u@\h:\W]\$\[\e[00m\] "
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+  export PS1='\[\033[01;32m\]\u\[\033[1;32m\]@\[\033[0m\]\[\033[01;32m\]\h \[\033[01;36m\]\w\[\033[33m\] $(parse_git_branch)\[\033[00m\] \[\033[0m\]\[\033[01;37m\]`date +"%H:%M:%S"` \[\033[0m\]\n\[\033[01;34m\]\$\[\033[00m\] '
 
+# other alias
 alias vi='vim'
 export EDITOR=vim
 
