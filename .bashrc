@@ -127,12 +127,13 @@ export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin
 
 # prompt settings
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "⚙ "
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-  export PS1='\[\033[01;32m\]\u\[\033[1;32m\]@\[\033[0m\]\[\033[01;32m\]\h \[\033[01;36m\]\w\[\033[33m\] $(parse_git_branch)\[\033[00m\] \[\033[0m\]\[\033[01;37m\]`date +"%H:%M:%S"` \[\033[0m\]\n\[\033[01;34m\]\$\[\033[00m\] '
+
+  export PS1='$(if [[ $? == 0 ]]; then echo \[\e[32m\]✔ ; else echo \[\e[31m\]✘ ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
 
 # other alias
 alias vi='vim'
