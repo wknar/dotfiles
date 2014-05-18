@@ -96,6 +96,7 @@ alias z='zsh'
 
 # exec python
 alias py='python'
+alias pysv='python -m CGIHTTPServer'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
