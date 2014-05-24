@@ -143,12 +143,16 @@ if [ $TERM == 'screen' ]; then
   PS1=${PS1}'\[\033k\W\033\\\]'
 fi
 
+vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\2/'`
+
 # other alias
 alias vi='vim'
 export EDITOR=vim
 
+# less view setting
 export LESS='-R'
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+alias less=' /usr/share/vim/vim${vim_version}/macros/less.sh'
 
 alias rm='rm -i'
 
