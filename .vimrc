@@ -23,38 +23,31 @@ set syntax=on
 vnoremap * "zy:let @/ = @z<CR>n"
 let g:netrw_liststyle=3
 
-" NeoBundle settings
-function! s:WithoutBundles()
-  colorscheme desert
-endfunction
+set nocompatible
+filetype off
 
-function! s:LoadBundles()
-  NeoBundle 'Shougo/neobundle.vim'
-  NeoBundle 'tpope/vim-surround'
-endfunction
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-function! s:InitNeoBundle()
-  if isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-    filetype plugin indent off
-    if has('vim_starting')
-      set runtimepath+=~/.vim/bundle/neobundle.vim/
-    endif
-    try
-      call neobundle#rc(expand('~/.vim/bundle/'))
-      call s:LoadBundles()
-    catch
-      call s:WithoutBundles()
-    endtry 
-  else
-    call s:WithoutBundles()
-  endif
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-  filetype indent plugin off
-  syntax on
-  colorscheme slate
-endfunction
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-call s:InitNeoBundle()
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'tpope/vim-rails'
+
+filetype plugin indent on
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
 
 runtime macros/matchit.vim
 
@@ -63,6 +56,9 @@ let g:hl_matchit_enable_on_vim_startup = 1
 let g:hl_matchit_hl_groupname = 'Title'
 let g:hl_matchit_allow_ft = 'html\|vim\|ruby\|sh'
 
+if !exists('loaded_matchit')
+  runtime macros/matchit.vim
+endif
 
 " cakephp function auto update
 function! NewUpdate()
