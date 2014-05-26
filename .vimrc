@@ -20,6 +20,8 @@ set wildmode=full
 
 set syntax=on
 
+colorscheme slate
+
 vnoremap * "zy:let @/ = @z<CR>n"
 let g:netrw_liststyle=3
 
