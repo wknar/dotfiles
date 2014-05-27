@@ -17,6 +17,10 @@ set directory=/tmp
 set backspace=indent,eol,start
 set wildmenu
 set wildmode=full
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 set syntax=on
 
@@ -40,8 +44,6 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-rails'
-
-filetype plugin indent on
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
