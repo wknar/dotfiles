@@ -88,6 +88,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# show diff with colors
+alias diff='colordiff'
+
 # change shell to zsh
 alias z='zsh'
 
