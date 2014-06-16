@@ -64,6 +64,11 @@ if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
 
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
+
 " cakephp function auto update
 function! NewUpdate()
   let time = strftime("%H", localtime())
