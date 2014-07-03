@@ -17,7 +17,6 @@ set directory=/tmp
 set backspace=indent,eol,start
 set wildmenu
 set wildmode=full
-" set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
