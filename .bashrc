@@ -151,6 +151,7 @@ vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\
 # other alias
 alias vi='vim'
 export EDITOR=vim
+alias open='gnome-open'
 
 # less view setting
 export LESS='-R'
