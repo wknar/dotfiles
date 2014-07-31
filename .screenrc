@@ -13,8 +13,7 @@ vbell off
 caption always "%{= mw} %-w%{=b cw}%n %t%{-}%+w %= %{=b mw}%y/%m/%d"
 bind n screen
 bind h prev
-bind j next
+bind k next
 bind l windowlist
-bind k kill
-bind q quit
+bind q kill
 termcapinfo xterm* ti@:te@
