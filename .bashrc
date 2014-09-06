@@ -167,3 +167,6 @@ if [ $TERM != "screen" ]; then
     screen -e ^z^z
   fi
 fi
+
+# neta
+alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
