@@ -140,7 +140,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-  export PS1='$(if [[ $? == 0 ]]; then echo \[\e[32m\]✔ ; else echo \[\e[31m\]✘ ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
+export PS1='$(if [[ $? == 0 ]]; then echo \[\e[32m\]✔ ; else echo \[\e[31m\]✘ ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
 
 if [ $TERM == 'screen' ]; then
   PS1=${PS1}'\[\033k\W\033\\\]'
@@ -170,3 +170,24 @@ fi
 
 # neta
 alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
+
+function sudden {
+  byte=`expr length "$1"`
+  frame=`expr $byte / 2 + 2`
+  echo -n ' '
+  c=0
+  while [ $c -ne $frame ]
+  do
+    echo -n "人"
+    c=`expr $c + 1`
+  done
+  echo -e "\n＞ $1 ＜"
+  echo -n ' '
+  c=0
+  while [ $c -ne $frame ]
+  do
+    echo -n "Y^"
+    c=`expr $c + 1`
+  done
+  echo -e
+}
