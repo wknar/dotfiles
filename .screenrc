@@ -10,7 +10,7 @@ defencoding utf-8
 escape ^Jj
 pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 vbell off
-caption always "%{= mw} %-w%{=b cw}%n %t%{-}%+w %= %{=b mw}%y/%m/%d"
+caption always "%{= bw} %-w%{=b cw}%n %t%{-}%+w %= %{=b gw}%y/%m/%d"
 bind n screen
 bind h prev
 bind k next
