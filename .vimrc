@@ -21,9 +21,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-set syntax=on
+" set syntax=on
 
 colorscheme slate
+syntax on
 
 vnoremap * "zy:let @/ = @z<CR>n"
 let g:netrw_liststyle=3
