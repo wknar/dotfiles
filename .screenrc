@@ -17,3 +17,4 @@ bind k next
 bind l windowlist
 bind q kill
 termcapinfo xterm* ti@:te@
+shell -$SHELL
