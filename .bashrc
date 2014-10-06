@@ -199,3 +199,27 @@ function sudden {
   done
   echo -e
 }
+
+# proxy settings
+export http_proxy="http://dev-proxy.db.rakuten.co.jp:9501"
+export https_proxy="https://dev-proxy.db.rakuten.co.jp:9501"
+export ftp_proxy="http://dev-proxy.db.rakuten.co.jp:9501"
+export RAKUTEN_SERVER_INFO="LOCAL"
+
+# JPE1 ssh
+alias dev='ssh arawakana01@dev-loginjp201zd-ssh.prod.jp.local'
+alias stg='ssh arawakana01@stg-loginjp201zd-ssh.prod.jp.local'
+alias pro='ssh arawakana01@loginjp201zd-ssh.prod.jp.local'
+# DC3 ssh
+alias dev-101='ssh arawakana01@dev-loginjp101c-ssh.zd.rakuten.co.jp'
+alias stg-101='ssh arawakana01@stg-loginjp101c-ssh.zd.rakuten.co.jp'
+alias pro-101='ssh arawakana01@loginjp101zc-ssh.zd.rakuten.co.jp'
+
+# FTP settings
+alias ftp-dev='ftp dev-loginjp201zd.zd.rakuten.co.jp'
+alias ftp-stg='ftp stg-loginjp201zd.zd.rakuten.co.jp'
+alias ftp-pro='ftp loginjp201zd.zd.rakuten.co.jp'
+# PFTP settings
+alias pftp-dev='pftp dev-loginjp201zd.zd.rakuten.co.jp'
+alias pftp-stg='pftp stg-loginjp201zd.zd.rakuten.co.jp'
+alias pftp-pro='pftp loginjp201zd.zd.rakuten.co.jp'
