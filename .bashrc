@@ -159,7 +159,7 @@ vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\
 # other alias
 alias vi='vim'
 export EDITOR=vim
-alias open='xdg-open'
+# alias open='xdg-open'
 alias xc='xclip'
 
 # less view setting
@@ -219,7 +219,3 @@ alias pro-101='ssh arawakana01@loginjp101zc-ssh.zd.rakuten.co.jp'
 alias ftp-dev='ftp dev-loginjp201zd.zd.rakuten.co.jp'
 alias ftp-stg='ftp stg-loginjp201zd.zd.rakuten.co.jp'
 alias ftp-pro='ftp loginjp201zd.zd.rakuten.co.jp'
-# PFTP settings
-alias pftp-dev='pftp dev-loginjp201zd.zd.rakuten.co.jp'
-alias pftp-stg='pftp stg-loginjp201zd.zd.rakuten.co.jp'
-alias pftp-pro='pftp loginjp201zd.zd.rakuten.co.jp'
