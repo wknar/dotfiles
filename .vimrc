@@ -35,8 +35,8 @@ nnoremap ep :Vexplore
 nnoremap == <C-w>=
 
 " tab transfer
-nnoremap df gt
-nnoremap ds gT
+nnoremap ty gt
+nnoremap tr gT
 
 set nocompatible
 filetype off
