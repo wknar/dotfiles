@@ -21,7 +21,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" set syntax=on
 syntax on
 colorscheme slate
 
