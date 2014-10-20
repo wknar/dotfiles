@@ -8,6 +8,9 @@ case $- in
       *) return;;
 esac
 
+PATH=/usr/bin/git:$PATH
+export PATH
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -159,7 +162,7 @@ vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\
 # other alias
 alias vi='vim'
 export EDITOR=vim
-alias open='xdg-open'
+# alias open='xdg-open'
 alias xc='xclip'
 
 # less view setting

@@ -22,12 +22,21 @@ set shiftwidth=2
 set expandtab
 
 " set syntax=on
-
 colorscheme slate
 syntax on
 
 vnoremap * "zy:let @/ = @z<CR>n"
-let g:netrw_liststyle=3
+let g:netrw_liststyle=10
+
+" treeview
+nnoremap ep :Vexplore
+
+" same width window
+nnoremap == <C-w>=
+
+" tab transfer
+nnoremap ty gt
+nnoremap tr gT
 
 set nocompatible
 filetype off
