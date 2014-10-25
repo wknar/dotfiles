@@ -31,7 +31,12 @@ let g:netrw_liststyle=10
 " treeview
 nnoremap ep :Vexplore
 
+" same width window
 nnoremap == <C-w>=
+
+" tab transfer
+nnoremap er gt
+nnoremap ew gT
 
 set nocompatible
 filetype off

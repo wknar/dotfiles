@@ -8,6 +8,9 @@ case $- in
       *) return;;
 esac
 
+PATH=/usr/bin/git:$PATH
+export PATH
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -159,7 +162,7 @@ vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\
 # other alias
 alias vi='vim'
 export EDITOR=vim
-alias open='xdg-open'
+# alias open='xdg-open'
 alias xc='xclip'
 
 # less view setting
@@ -180,22 +183,29 @@ fi
 alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
 
 function sudden {
-  byte=`expr length "$1"`
-  frame=`expr $byte / 2 + 2`
-  echo -n ' '
-  c=0
-  while [ $c -ne $frame ]
-  do
-    echo -n "人"
-    c=`expr $c + 1`
-  done
-  echo -e "\n＞ $1 ＜"
-  echo -n ' '
-  c=0
-  while [ $c -ne $frame ]
-  do
-    echo -n "Y^"
-    c=`expr $c + 1`
-  done
-  echo -e
+  case "$OSTYPE" in
+  darwin*)
+    byte=`echo 'okome' | awk '{ print length }'`
+  ;;
+  linux*)
+    byte=`expr length "$1"`
+  ;;
+  esac
+    frame=`expr $byte / 2 + 2`
+    echo -n ' '
+    c=0
+    while [ $c -ne $frame ]
+    do
+      echo -n "人"
+      c=`expr $c + 1`
+    done
+    echo -e "\n＞ $1 ＜"
+    echo -n ' '
+    c=0
+    while [ $c -ne $frame ]
+    do
+      echo -n "Y^"
+      c=`expr $c + 1`
+    done
+    echo -e
 }
