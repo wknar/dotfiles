@@ -185,7 +185,7 @@ alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
 function sudden {
   case "$OSTYPE" in
   darwin*)
-    byte=`echo 'okome' | awk '{ print length }'`
+    byte=`echo "$1" | awk '{ print length }'`
   ;;
   linux*)
     byte=`expr length "$1"`
