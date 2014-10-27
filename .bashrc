@@ -183,24 +183,31 @@ fi
 alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
 
 function sudden {
-  byte=`expr length "$1"`
-  frame=`expr $byte / 2 + 2`
-  echo -n ' '
-  c=0
-  while [ $c -ne $frame ]
-  do
-    echo -n "人"
-    c=`expr $c + 1`
-  done
-  echo -e "\n＞ $1 ＜"
-  echo -n ' '
-  c=0
-  while [ $c -ne $frame ]
-  do
-    echo -n "Y^"
-    c=`expr $c + 1`
-  done
-  echo -e
+  case "$OSTYPE" in
+  darwin*)
+    byte=`echo 'okome' | awk '{ print length }'`
+  ;;
+  linux*)
+    byte=`expr length "$1"`
+  ;;
+  esac
+    frame=`expr $byte / 2 + 2`
+    echo -n ' '
+    c=0
+    while [ $c -ne $frame ]
+    do
+      echo -n "人"
+      c=`expr $c + 1`
+    done
+    echo -e "\n＞ $1 ＜"
+    echo -n ' '
+    c=0
+    while [ $c -ne $frame ]
+    do
+      echo -n "Y^"
+      c=`expr $c + 1`
+    done
+    echo -e
 }
 
 # proxy settings
