@@ -224,6 +224,14 @@ alias pro='ssh arawakana01@loginjp201zd-ssh.prod.jp.local'
 alias dev-101='ssh arawakana01@dev-loginjp101c-ssh.zd.rakuten.co.jp'
 alias stg-101='ssh arawakana01@stg-loginjp101c-ssh.zd.rakuten.co.jp'
 alias pro-101='ssh arawakana01@loginjp101zc-ssh.zd.rakuten.co.jp'
+# telnet
+alias tel-dev='telnet -larawakana01 dev-loginjp201zd.zd.rakuten.co.jp'
+alias tel-stg='telnet -larawakana01 stg-loginjp201zd.zd.rakuten.co.jp'
+alias tel-pro='telnet -larawakana01 loginjp201zd.zd.rakuten.co.jp'
+alias tel-dev-101='telnet -larawakana01 dev-loginjp101c.db.rakuten.co.jp'
+alias tel-stg-101='telnet -larawakana01 stg-loginjp101c.db.rakuten.co.jp'
+alias tel-pro-101='telnet -larawakana01 loginjp101c.db.rakuten.co.jp'
+
 
 # FTP settings
 alias ftp-dev='ftp dev-loginjp201zd.zd.rakuten.co.jp'
