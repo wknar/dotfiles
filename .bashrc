@@ -237,3 +237,6 @@ alias tel-pro-101='telnet -larawakana01 loginjp101c.db.rakuten.co.jp'
 alias ftp-dev='ftp dev-loginjp201zd.zd.rakuten.co.jp'
 alias ftp-stg='ftp stg-loginjp201zd.zd.rakuten.co.jp'
 alias ftp-pro='ftp loginjp201zd.zd.rakuten.co.jp'
+
+# read git completion
+source ~/.git-completion.bash
