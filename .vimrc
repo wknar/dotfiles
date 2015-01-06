@@ -20,6 +20,7 @@ set wildmode=full
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set noswapfile
 
 syntax on
 colorscheme slate
