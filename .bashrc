@@ -209,6 +209,3 @@ function sudden {
     done
     echo -e
 }
-
-# connect to raspi
-alias raspi='ssh pi@192.168.100.102'
