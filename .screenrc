@@ -18,3 +18,6 @@ bind l windowlist
 bind q kill
 termcapinfo xterm* ti@:te@
 shell -$SHELL
+
+bufferfile $HOME/.screen_exchange
+bindkey -m ' ' eval 'stuff \040' writebuf 'exec sh -c "cat $HOME/.screen_exchange | pbcopy"'
