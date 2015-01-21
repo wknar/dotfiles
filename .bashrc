@@ -105,6 +105,9 @@ alias diff='colordiff'
 # change shell to zsh
 alias z='zsh'
 
+# call vagrant
+alias vg='vagrant'
+
 # exec ruby
 alias rb='ruby'
 
