@@ -1,0 +1,9 @@
+[user]
+	name = wknar
+	email = wakana.ara@gmail.com
+[core]
+	editor = vim
+[color]
+  ui = auto
+[alias]
+  st = status

@@ -20,4 +20,4 @@ termcapinfo xterm* ti@:te@
 shell -$SHELL
 
 bufferfile $HOME/.screen_exchange
-bindkey -m ' ' eval 'stuff \040' writebuf 'exec sh -c "cat $HOME/.screen_exchange | pbcopy"'
+bindkey -m ' ' eval 'stuff \040' writebuf 'exec sh -c "if [ -e /usr/bin/pbcopy ]; then cat $HOME/.screen_exchange | pbcopy; fi"'
