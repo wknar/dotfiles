@@ -165,8 +165,6 @@ vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\
 # other alias
 alias vi='vim'
 export EDITOR=vim
-# alias open='xdg-open'
-alias xc='xclip'
 
 # less view setting
 export LESS='-R'
