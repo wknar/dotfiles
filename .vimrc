@@ -56,6 +56,9 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'basyura/twibill.vim'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'basyura/TweetVim'
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
