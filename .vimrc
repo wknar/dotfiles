@@ -25,6 +25,10 @@ set noswapfile
 syntax on
 colorscheme slate
 
+" move cursor like bash in command mode
+cnoremap <C-b> <LEFT>
+cnoremap <C-f> <RIGHT>
+
 vnoremap * "zy:let @/ = @z<CR>n"
 let g:netrw_liststyle=10
 
@@ -37,6 +41,12 @@ nnoremap == <C-w>=
 " tab transfer
 nnoremap er gt
 nnoremap ew gT
+
+" tweetvim
+cnoremap twh TweetVimHomeTimeline
+cnoremap twu TweetVimUserTimeline
+cnoremap twt TweetVimCommandSay
+cnoremap tws TweetVimSearch
 
 set nocompatible
 filetype off
