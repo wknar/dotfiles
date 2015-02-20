@@ -146,6 +146,16 @@ nvm use v0.11.13
 # path to coffee
 export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin
 
+# check php syntax in git
+function check_php {
+  git status
+  echo -e '\n ====== PHP Syntax check ======'
+  git status --short | while read line
+  do
+    [[ $line =~ ^.*\.(php)$ ]] && php -l `echo $line | sed -e "s/M //g"`
+  done
+}
+
 # prompt settings
 function parse_git_dirty {
   [[ ! $(git status 2> /dev/null | tail -n1) =~ ^.*(nothing to commit).*$ ]] && echo " ⚙ "
