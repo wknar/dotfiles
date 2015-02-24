@@ -147,9 +147,9 @@ nvm use v0.11.13
 export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin
 
 # check php syntax in git
-function check_php {
+function check_git_syntax {
   git status
-  echo -e '\n ====== PHP Syntax check ======'
+  echo -e '\n ====== Syntax Check ======'
   git status --short | while read line
   do
     [[ $line =~ ^.*\.(php)$ ]] && php -l `echo $line | sed -e "s/M //g"`
