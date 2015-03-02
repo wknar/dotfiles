@@ -47,6 +47,8 @@ cnoremap twh TweetVimHomeTimeline
 cnoremap twu TweetVimUserTimeline
 cnoremap twt TweetVimCommandSay
 cnoremap tws TweetVimSearch
+nmap <silent> <buffer> <leader>f  <Plug>(tweetvim_action_favorite)
+nmap <silent> <buffer> <leader>F  <Plug>(tweetvim_action_favstar)
 
 set nocompatible
 filetype off
@@ -66,9 +68,14 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'basyura/twibill.vim'
-NeoBundle 'tyru/open-browser.vim'
+" tweet vim plugins
 NeoBundle 'basyura/TweetVim'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'basyura/twibill.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'mattn/favstar-vim'
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
