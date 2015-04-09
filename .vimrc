@@ -50,6 +50,9 @@ cnoremap tws TweetVimSearch
 nmap <silent> <buffer> <leader>f  <Plug>(tweetvim_action_favorite)
 nmap <silent> <buffer> <leader>F  <Plug>(tweetvim_action_favstar)
 
+" open ctag in tab/vertical split
+map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
 set nocompatible
 filetype off
 

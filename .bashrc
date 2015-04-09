@@ -93,6 +93,7 @@ esac
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+GREP_COLOR='01;35'
 
 # some more ls aliases
 alias ll='ls -alF'
