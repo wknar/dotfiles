@@ -158,13 +158,24 @@ function parse_git_branch {
 PS_OK="\xF0\x9f\x90\xb7"
 PS_NG="\xF0\x9f\x90\xbd"
 
+case "$OSTYPE" in
+darwin*)
+# this only use in mac
 export PS1='$(if [[ $? == 0 ]]; then echo -e $PS_OK ; else echo -e $PS_NG ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
+;;
+linux*)
+export PS1='$(if [[ $? == 0 ]]; then echo \[\e[32m\]✔ ; else echo \[\e[31m\]✘ ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
+;;
+esac
 
 if [ $TERM == 'screen' ]; then
   PS1=${PS1}'\[\033k\W\033\\\]'
 fi
 
 vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\2/'`
+
+# git
+alias g='git'
 
 # other alias
 alias vi='vim'
