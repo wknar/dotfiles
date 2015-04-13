@@ -155,7 +155,10 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-export PS1='$(if [[ $? == 0 ]]; then echo \[\e[32m\]✔ ; else echo \[\e[31m\]✘ ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
+PS_OK="\xF0\x9f\x90\xb7"
+PS_NG="\xF0\x9f\x90\xbd"
+
+export PS1='$(if [[ $? == 0 ]]; then echo -e $PS_OK ; else echo -e $PS_NG ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
 
 if [ $TERM == 'screen' ]; then
   PS1=${PS1}'\[\033k\W\033\\\]'
