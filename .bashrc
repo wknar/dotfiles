@@ -90,10 +90,12 @@ linux*)
   ;;
 esac
 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep='grep --color=auto -i'
+alias fgrep='fgrep --color=auto -i'
+alias egrep='egrep --color=auto -i'
 export GREP_COLOR='01;35'
+
+alias gg='git grep -iH --heading --break'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -141,8 +143,8 @@ if ! shopt -oq posix; then
 fi
 
 # use node
-source ~/.nvm/nvm.sh
-nvm use v0.11.13
+# source ~/.nvm/nvm.sh
+# nvm use v0.11.13
 
 # path to coffee
 export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin

@@ -3,12 +3,15 @@
 	email = wakana.ara@gmail.com
 [core]
 	editor = vim
+	autocrlf = input
 [color]
   ui = auto
+[grep]
+  linenumber = true
 [alias]
   st = "!f(){ \
           git status; \
-          echo \"\n ====== Syntax Check ======\"; \
+          echo \"\n ====== Syntax Check ======\n\"; \
           git status --short | while read line; \
           do \
             if [[ $line =~ ^.*\\.(php)$ ]]; then \
@@ -23,3 +26,10 @@
             fi; \
           done; \
         };f"
+  co = checkout
+  br = branch
+  cl = clone
+  cm = commit
+  ps = push
+  pl = pull
+  gr = grep
