@@ -21,6 +21,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set noswapfile
+set wildmode=list:full
+if exists("&wildignorecase")
+  set wildignorecase
+endif
 
 syntax on
 colorscheme slate
