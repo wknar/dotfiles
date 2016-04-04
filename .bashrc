@@ -193,6 +193,9 @@ if [ $TERM != "screen" ]; then
   fi
 fi
 
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
 # neta
 alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
 
