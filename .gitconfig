@@ -30,6 +30,6 @@
   br = branch
   cl = clone
   cm = commit
-  ps = push
+  ps = push --force-with-lease
   pl = pull
   gr = grep
