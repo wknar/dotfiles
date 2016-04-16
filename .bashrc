@@ -174,6 +174,7 @@ vim_version=`vim --version | head -1 | sed 's/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\
 
 # git
 alias g='git'
+source /usr/local/etc/bash_completion.d/git-*
 
 # other alias
 alias vi='vim'
