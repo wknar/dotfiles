@@ -61,12 +61,11 @@ set nocompatible
 filetype off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/,/usr/share/vim/vim{$vim_version}
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 NeoBundleCheck
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -84,6 +83,7 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'mattn/favstar-vim'
+call neobundle#end()
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()

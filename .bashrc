@@ -147,14 +147,14 @@ export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin
 
 # prompt settings
 function parse_git_dirty {
-  [[ ! $(git status 2> /dev/null | tail -n1) =~ ^.*(nothing to commit).*$ ]] && if [[ $OSTYPE == darwin* ]]; then echo -e " \xf0\x9f\xa4\x96 "; else echo echo " ⚙ "; fi
+  [[ ! $(git status 2> /dev/null | tail -n1) =~ ^.*(nothing to commit).*$ ]] && if [[ $OSTYPE == darwin* ]]; then echo -e " \xe2\x9a\x9b "; else echo echo " ⚙ "; fi
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-PS_OK="\xF0\x9f\x90\xb7"
-PS_NG="\xF0\x9f\x90\xbd"
+PS_OK="\xF0\x9f\x99\x86"
+PS_NG="\xF0\x9f\x99\x85"
 
 case "$OSTYPE" in
 darwin*)
@@ -193,6 +193,9 @@ if [ $TERM != "screen" ]; then
     screen -e ^z^z
   fi
 fi
+
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # neta
 alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
