@@ -233,3 +233,8 @@ function sudden {
 if [ -e ~/company.sh ]; then
 . ~/company.sh
 fi
+
+# record iOS simulater screen shot
+alias sim_ss='xcrun simctl io booted screenshot'
+# record iOS simulater movie
+alias sim_mv='xcrun simctl io booted recordVideo iOSsimulator_`date +%Y%m%d_%H-%M-%S`.mov'
