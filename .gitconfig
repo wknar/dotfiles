@@ -6,27 +6,14 @@
 	autocrlf = input
 [color]
   ui = auto
+[color "grep"]
+  match = cyan
+  linenumber = bold white
+  filename = yellow
 [grep]
   linenumber = true
 [alias]
   st = status
-#  st = "!f(){ \
-#          git status; \
-#          echo \"\n ====== Syntax Check ======\n\"; \
-#          git status --short | while read line; \
-#          do \
-#            if [[ $line =~ ^.*\\.(php)$ ]]; then \
-#              php -l `echo $line | sed -e \"s/M //g\"` > /dev/null; \
-#              [[ $? == 0 ]] && st=32 || st=33; \
-#              echo \"\\033[0;$(echo $st)m$(php -l `echo $line | sed -e \"s/M //g\"`)\\033[0;39m\"; \
-#            elif [[ $line =~ ^.*\\.(rb)$ ]]; then \
-#              ruby -c `echo $line | sed -e \"s/M //g\"` > /dev/null 2>&1; \
-#              [[ $? == 0 ]] && st=32 || st=33; \
-#              echo \"\\033[1;37m$(echo $line | sed -e \"s/M //g\")\\033[0;39m\"; \
-#              echo \"\\033[0;$(echo $st)m$(ruby -c `echo $line | sed -e \"s/M //g\"`)\\033[0;39m\"; \
-#            fi; \
-#          done; \
-#        };f"
   co = checkout
   br = branch
   cl = clone

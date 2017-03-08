@@ -86,11 +86,6 @@ linux*)
   ;;
 esac
 
-alias grep='grep --color=auto -i'
-alias fgrep='fgrep --color=auto -i'
-alias egrep='egrep --color=auto -i'
-export GREP_COLOR='01;35'
-
 alias gg='git grep -iH --heading --break'
 
 # some more ls aliases
