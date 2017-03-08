@@ -142,7 +142,7 @@ export PATH=$PATH:$HOME/.npm/coffee-script/1.7.1/package/bin
 
 # prompt settings
 function parse_git_dirty {
-  [[ ! $(git status 2> /dev/null | tail -n1) =~ ^.*(nothing to commit).*$ ]] && if [[ $OSTYPE == darwin* ]]; then echo -e " \xe2\x9a\x9b "; else echo echo " ⚙ "; fi
+  [[ ! $(git status 2> /dev/null | tail -n1) =~ ^.*(nothing to commit).*$ ]] && if [[ $OSTYPE == darwin* ]]; then echo -e " \xf0\x9f\x90\xa3 "; else echo echo " ⚙ "; fi
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
@@ -154,7 +154,7 @@ PS_NG="\xF0\x9f\x99\x85"
 case "$OSTYPE" in
 darwin*)
 # this only use in mac
-export PS1='$(if [[ $? == 0 ]]; then echo -e $PS_OK ; else echo -e $PS_NG ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
+export PS1='$(if [[ $? == 0 ]]; then echo -e $PS_OK ; else echo -e $PS_NG ; fi)\n\[\033[00;32m\]\u@\[\033[00;32m\]\h \[\033[00;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[00;37m\]`date +"%H:%M:%S"` \n\[\033[01;37m\]\$\[\033[00m\] '
 ;;
 linux*)
 export PS1='$(if [[ $? == 0 ]]; then echo \[\e[32m\]✔ ; else echo \[\e[31m\]✘ ; fi)\n\[\033[01;32m\]\u@\[\033[01;32m\]\h \[\033[01;36m\]\w \[\033[33m\]$(parse_git_branch) \[\033[01;37m\]`date +"%H:%M:%S"` \n\[\033[01;34m\]\$\[\033[00m\] '
