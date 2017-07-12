@@ -233,3 +233,6 @@ fi
 alias sim_ss='xcrun simctl io booted screenshot'
 # record iOS simulater movie
 alias sim_mv='xcrun simctl io booted recordVideo iOSsimulator_`date +%Y%m%d_%H-%M-%S`.mov'
+
+# xcode-select
+alias xs='xcode-select'
