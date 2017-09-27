@@ -21,3 +21,4 @@
   ps = push --force-with-lease
   pl = pull
   gr = grep
+  git = !exec git
