@@ -148,8 +148,8 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-PS_OK="\xF0\x9f\x99\x86"
-PS_NG="\xF0\x9f\x99\x85"
+PS_OK=😎
+PS_NG=😂
 
 case "$OSTYPE" in
 darwin*)
