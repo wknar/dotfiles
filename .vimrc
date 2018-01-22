@@ -129,6 +129,8 @@ let g:cakephp_log = {
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*,txt} set filetype=markdown
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
+autocmd BufNewFile,BufRead *.tx set filetype=html
+
 " neo neocomplcache setting
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
