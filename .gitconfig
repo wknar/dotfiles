@@ -22,3 +22,5 @@
   pl = pull
   gr = grep
   git = !exec git
+[pager]
+  branch = cat
