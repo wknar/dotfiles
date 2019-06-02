@@ -236,3 +236,6 @@ alias sim_mv='xcrun simctl io booted recordVideo iOSsimulator_`date +%Y%m%d_%H-%
 
 # xcode-select
 alias xs='xcode-select'
+
+## Flutter path
+export PATH="$PATH:`pwd`/flutter/bin"
