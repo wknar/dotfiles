@@ -26,9 +26,6 @@ if exists("&wildignorecase")
   set wildignorecase
 endif
 
-syntax on
-colorscheme slate
-
 " move cursor like bash in command mode
 cnoremap <C-b> <LEFT>
 cnoremap <C-f> <RIGHT>
@@ -92,6 +89,9 @@ if neobundle#exists_not_installed_bundles()
   echomsg 'Please execute ":NeoBundleInstall" command.'
   "finish
 endif
+
+syntax enable
+set background=dark
 
 runtime macros/matchit.vim
 
