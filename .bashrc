@@ -197,6 +197,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # neta
 alias ks='echo "( ﾟзﾟ )< ｶｽ!!"'
+alias bishi='echo -e "　 ∧,,∧\n （=・ω・）\n （,, ｕｕﾉ\n"'
 
 function sudden {
   case "$OSTYPE" in
